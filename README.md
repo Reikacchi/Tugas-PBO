@@ -1,6 +1,2 @@
 hasil running
-
-
- image (18).png…]()
-
-
+![Uploading image (18).png…]()
