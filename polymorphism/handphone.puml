@@ -1,0 +1,49 @@
+@startuml
+class Main {
+    + {static} void main(String[] args)
+}
+
+class Handphone {
+    - String merk
+    - String model
+    + Handphone(String merk, String model)
+    + void nyalakan()
+    + void matikan()
+    + void kirimPesan (string nomor tujuan,string pesan)
+    + void kirimPesan ( string NomorTujuan1, string NomorTujuan2, String pesan)
+    + void kirimPesan ( String[] daftar nomor,string pesan)
+    + void telepon(String nomor)
+}
+
+class HandphonePintar {
+    + HandphonePintar(String merk, String model)
+    + void nyalakan()
+    + void matikan()
+    + void telepon(String nomor)
+}
+
+class Smartphone {
+    + Smartphone(String merk, String model)
+    + void nyalakan()
+    + void matikan()
+    + void kirimPesan ( stringTUjuan, string pesan)
+    + void kirimPesan ( string email tujuan, string objek, string pesan)
+    + void telepon(String nomor)
+    + void aksesInternet()
+}
+
+class FeaturePhone {
+    + FeaturePhone(String merk, String model)
+    + void nyalakan()
+    + void matikan()
+    + void telepon(String nomor)
+    + void mainGameSnake()
+}
+
+Handphone <|-- HandphonePintar
+Handphone <|-- Smartphone
+Handphone <|-- FeaturePhone
+Main --> Handphone : menggunakan
+Main --> Smartphone : menggunakan
+Main --> FeaturePhone : menggunakan
+@enduml
